@@ -114,3 +114,4 @@ remove_image(View which will be used to remove a particular image),
 add_images(View which will enable users to add more images of the same type).
 ```
 
+For more details, checkout the [WIKI](https://github.com/BLACKBUCK-LABS/image-library/wiki) page
