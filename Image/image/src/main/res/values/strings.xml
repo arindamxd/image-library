@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Image</string>
+    <string name="change_image">Remove Image</string>
+    <string name="add_more_images">+ Add More Images</string>
+    <string name="notification_status_paused">Upload Paused. Will retry soon.</string>
+    <string name="notification_status_error">Error in upload. Will retry soon.</string>
+    <string name="notification_status_success">Successfully uploaded image</string>
+    <string name="images_uploaded_successfully">All Images Uploaded Successfully</string>
+    <string name="notification_title">Uploading Images (%1$d Pending)</string>
+    <string name="notification_uploading">Uploading</string>
+</resources>

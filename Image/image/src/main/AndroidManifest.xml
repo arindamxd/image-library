@@ -1,0 +1,31 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+
+    package="com.blackbuck.mobile.image">
+
+    <application
+        android:allowBackup="true"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <service
+            android:name=".upload.MultipartUploadService"
+            android:exported="false" />
+
+        <service
+            android:name=".services.ImageDeleteService"
+            android:exported="false" />
+
+        <service
+            android:name=".services.PurgeService"
+            android:exported="false" />
+
+        <receiver android:name=".receiver.SyncReceiver">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+
+    </application>
+
+</manifest>

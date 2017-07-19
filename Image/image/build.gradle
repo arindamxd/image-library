@@ -1,0 +1,57 @@
+apply plugin: 'com.android.library'
+
+ext {
+    bintrayRepo = 'blackbuck'
+    bintrayName = 'bb-image'
+
+    publishedGroupId = 'com.blackbuck.library'
+    libraryName = 'image'
+    artifact = 'image'
+
+    libraryDescription = 'A plug-n-play library to add multipart image support '
+
+    siteUrl = 'https://github.com/BLACKBUCK-LABS/image-library'
+    gitUrl = 'https://github.com/BLACKBUCK-LABS/image-library'
+
+    libraryVersion = '1.0'
+
+    developerId = 'blackbuck'
+    developerName = 'Blackbuck Mobile'
+    developerEmail = 'developer@blackbuck.com'
+
+    licenseName = 'The Apache Software License, Version 2.0'
+    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+    allLicenses = ["Apache-2.0"]
+}
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion "25.0.3"
+    defaultConfig {
+        minSdkVersion 17
+        targetSdkVersion 25
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+        buildConfigField "int", "IMAGE_DB_VERSION", "12"
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile 'com.android.support:appcompat-v7:25.3.1'
+    testCompile 'junit:junit:4.12'
+    provided 'com.squareup.picasso:picasso:2.5.2'
+    provided 'com.squareup.retrofit2:retrofit:2.1.0'
+    provided 'com.squareup.retrofit2:converter-gson:2.1.0'
+    provided 'com.squareup.retrofit2:converter-scalars:2.1.0'
+}
+apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/installv1.gradle'
+apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/bintrayv1.gradle'
+
+
+
